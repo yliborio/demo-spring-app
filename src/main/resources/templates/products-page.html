@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Landon Hotel: Room Reservations</title>
+</head>
+<body>
+<h1>Welcome to the Products Page</h1>
+<table>
+    <tr>
+        <td>Title</td>
+    </tr>
+    <tr th:each="product: ${products}">
+        <td th:text="${product.title}">Title</td>
+    </tr>
+</table>
+
+</body>
+</html>
