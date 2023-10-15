@@ -54,6 +54,27 @@ class ProductsControllerTest {
     }
 
     @Test
+    void addProduct_shouldReturnProduct() {
+        Product product = new Product();
+        when(productService.addProduct(product)).thenReturn(product);
+
+        Product result = productsController.addProduct(product);
+
+        assertEquals(product, result);
+    }
+
+    @Test
+    void updateProduct_shouldReturnProduct() {
+        Product product = new Product();
+        product.setId(1L);
+        when(productService.updateProduct(product)).thenReturn(Optional.of(product));
+        when(productService.getProductById(1L)).thenReturn(Optional.of(product));
+        Optional<Product> result = productsController.updateProduct(product, 1L);
+
+        assertEquals(product, result.get());
+    }
+
+    @Test
     void deleteProductById_shouldReturnDeletedProduct() {
         long productId = 1L;
         Product product = new Product();  // Create a sample product

@@ -40,13 +40,12 @@ public class ProductsController {
 
     @PostMapping(path = "/products")
     @ResponseStatus(HttpStatus.CREATED)
-    public Product addGuest(@RequestBody Product product){
+    public Product addProduct(@RequestBody Product product){
         return this.productsService.addProduct(product);
     }
 
     @PatchMapping(path = "/products/{productId}")
-    public Product updateProduct(@RequestBody Product product, @PathVariable long productId){
-        product.setId(productId);
-        return this.productsService.addProduct(product);
+    public Optional<Product> updateProduct(@RequestBody Product product, @PathVariable long productId){
+        return this.productsService.updateProduct(product);
     }
 }
