@@ -14,7 +14,6 @@ import java.util.Optional;
 @RequestMapping("/api")
 public class ProductsController {
 
-
     private final ProductService productsService;
 
     public ProductsController(ProductService productsService) {
@@ -23,7 +22,7 @@ public class ProductsController {
 
 
     @RequestMapping(path="/products")
-    public List<Product> getGuests() {
+    public List<Product> getProducts() {
         return productsService.getProducts();
     }
 
