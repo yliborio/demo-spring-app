@@ -3,7 +3,7 @@ package com.yliborio.demospring.entity;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class ProductTest {
+class ProductTests {
 
     @Test
     void testGettersAndSetters() {
@@ -35,16 +35,9 @@ class ProductTest {
         // Modify values and recheck
         product.setId(2);
         assertEquals(2, product.getId());
-
-
-
-
-
-
-
-
+        assertEquals("Product{id=2, title='Test Product', price=10.0, description='description', category='test', image='image.url', rating_rate=5, rating_count=10}", product.toString());
 
     }
 
-    // Add more tests for other methods or behaviors as needed
+
 }
