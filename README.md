@@ -1,3 +1,5 @@
+[![Java CI with Maven](https://github.com/yliborio/demo-spring-app/actions/workflows/maven.yml/badge.svg)](https://github.com/yliborio/demo-spring-app/actions/workflows/maven.yml)
+
 # Spring API Demo
 
 This repository contains a Spring API (Spring Boot v3) that provides a simple manipulation of a database of products.
