@@ -1,6 +1,6 @@
 package com.yliborio.demospring.web;
 
-import com.yliborio.demospring.entities.Product;
+import com.yliborio.demospring.entity.Product;
 import com.yliborio.demospring.repository.ProductRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,7 +18,7 @@ public class ProductPage {
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public String getGuests(Model model){
+    public String getProducts(Model model){
         Iterable<Product> products = this.productRepository.findAll();
         model.addAttribute("products", products);
         return "products-page";

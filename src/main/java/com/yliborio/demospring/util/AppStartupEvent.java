@@ -1,12 +1,10 @@
 package com.yliborio.demospring.util;
 
-import com.yliborio.demospring.entities.Product;
+import com.yliborio.demospring.entity.Product;
 import com.yliborio.demospring.repository.ProductRepository;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
-
-import java.sql.Date;
 
 @Component
 public class AppStartupEvent implements ApplicationListener<ApplicationReadyEvent> {
@@ -20,7 +18,7 @@ public class AppStartupEvent implements ApplicationListener<ApplicationReadyEven
 
     @Override
     public void onApplicationEvent(ApplicationReadyEvent event) {
-        Iterable<Product> rooms = this.productRepository.findAll();
-        rooms.forEach(System.out::println);
+        Iterable<Product> products = this.productRepository.findAll();
+        products.forEach(System.out::println);
     }
 }

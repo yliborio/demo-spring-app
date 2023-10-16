@@ -1,4 +1,4 @@
-package com.yliborio.demospring.entities;
+package com.yliborio.demospring.entity;
 
 import jakarta.persistence.*;
 

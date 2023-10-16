@@ -1,6 +1,6 @@
 package com.yliborio.demospring.repository;
 
-import com.yliborio.demospring.entities.Product;
+import com.yliborio.demospring.entity.Product;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

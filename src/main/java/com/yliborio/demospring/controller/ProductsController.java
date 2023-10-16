@@ -1,9 +1,8 @@
 package com.yliborio.demospring.controller;
 
 
-import com.yliborio.demospring.entities.Product;
+import com.yliborio.demospring.entity.Product;
 import com.yliborio.demospring.service.ProductService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

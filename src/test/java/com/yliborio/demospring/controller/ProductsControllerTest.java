@@ -1,6 +1,6 @@
 package com.yliborio.demospring.controller;
 
-import com.yliborio.demospring.entities.Product;
+import com.yliborio.demospring.entity.Product;
 import com.yliborio.demospring.service.ProductService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

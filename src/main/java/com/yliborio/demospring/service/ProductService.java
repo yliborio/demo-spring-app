@@ -1,6 +1,6 @@
 package com.yliborio.demospring.service;
 
-import com.yliborio.demospring.entities.Product;
+import com.yliborio.demospring.entity.Product;
 import com.yliborio.demospring.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
@@ -42,13 +42,7 @@ public class ProductService {
     public Optional<Product> updateProduct(Product updatedProduct){
         Optional<Product> product = this.getProductById(updatedProduct.getId());
         if(product.isEmpty()) return product;
-        product.get().setTitle(updatedProduct.getTitle());
-        product.get().setPrice(updatedProduct.getPrice());
-        product.get().setCategory(updatedProduct.getCategory());
-        product.get().setImage(updatedProduct.getImage());
-        product.get().setDescription(updatedProduct.getDescription());
-        productRepository.save(product.get());
-        return product;
+        return Optional.of(productRepository.save(updatedProduct));
     }
 
 }
